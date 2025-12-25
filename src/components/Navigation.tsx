@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import evoniqueLogo from "@/assets/evonique-logo.png";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -35,17 +36,24 @@ export const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-primary/20 py-3"
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-md border-b border-primary/20 py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => scrollToSection("#home")}
-          className="text-2xl md:text-3xl font-heading font-semibold tracking-[0.3em] text-gradient-gold hover:opacity-80 transition-opacity"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          EVONIQUE
+          <img 
+            src={evoniqueLogo} 
+            alt="Evonique" 
+            className={`transition-all duration-300 ${isScrolled ? 'w-10 h-10' : 'w-12 h-12'}`}
+          />
+          <span className="text-xl md:text-2xl font-heading font-semibold tracking-[0.2em] text-gradient-gold">
+            EVONIQUE
+          </span>
         </button>
 
         {/* Desktop Navigation */}

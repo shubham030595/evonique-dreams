@@ -2,48 +2,55 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+import royalPalaceWedding from "@/assets/gallery/royal-palace-wedding.jpg";
+import floralMandap from "@/assets/gallery/floral-mandap.jpg";
+import heritageCourtyard from "@/assets/gallery/heritage-courtyard.jpg";
+import sangeetNight from "@/assets/gallery/sangeet-night.jpg";
+import beachWedding from "@/assets/gallery/beach-wedding.jpg";
+import receptionSetup from "@/assets/gallery/reception-setup.jpg";
+
 const galleryImages = [
   {
     id: 1,
     category: "Weddings",
     title: "Royal Palace Wedding",
     description: "A magnificent celebration at Umaid Bhawan Palace",
-    placeholder: "bg-gradient-to-br from-amber-900/30 via-rose-900/20 to-purple-900/30",
+    image: royalPalaceWedding,
   },
   {
     id: 2,
     category: "Décor",
     title: "Floral Mandap Design",
     description: "Cascading florals in ivory and gold",
-    placeholder: "bg-gradient-to-br from-rose-900/30 via-pink-900/20 to-amber-900/30",
+    image: floralMandap,
   },
   {
     id: 3,
     category: "Venues",
     title: "Heritage Courtyard",
     description: "Candlelit ceremony in a historic haveli",
-    placeholder: "bg-gradient-to-br from-purple-900/30 via-indigo-900/20 to-rose-900/30",
+    image: heritageCourtyard,
   },
   {
     id: 4,
     category: "Celebrations",
     title: "Sangeet Night",
     description: "An evening of music, dance, and joy",
-    placeholder: "bg-gradient-to-br from-amber-900/30 via-orange-900/20 to-rose-900/30",
+    image: sangeetNight,
   },
   {
     id: 5,
     category: "Weddings",
     title: "Beach Wedding",
     description: "Sunset vows on pristine shores",
-    placeholder: "bg-gradient-to-br from-cyan-900/30 via-blue-900/20 to-purple-900/30",
+    image: beachWedding,
   },
   {
     id: 6,
     category: "Décor",
     title: "Reception Setup",
     description: "Crystal chandeliers and golden drapes",
-    placeholder: "bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-rose-900/30",
+    image: receptionSetup,
   },
 ];
 
@@ -119,20 +126,18 @@ export const GallerySection = () => {
             <button
               key={image.id}
               onClick={() => setSelectedImage(image.id)}
-              className={`group relative aspect-[4/3] rounded-lg overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-500 hover:glow-gold opacity-0 animate-fade-in-up ${image.placeholder}`}
+              className="group relative aspect-[4/3] rounded-lg overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-500 hover:glow-gold opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${0.1 + index * 0.1}s` }}
             >
-              {/* Placeholder visual */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <div className="w-16 h-16 mx-auto border border-primary/30 rounded-full flex items-center justify-center mb-4 group-hover:border-primary/50 transition-colors">
-                    <div className="w-2 h-2 bg-primary/50 rounded-full" />
-                  </div>
-                </div>
-              </div>
+              {/* Image */}
+              <img 
+                src={image.image} 
+                alt={image.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
               
               {/* Info */}
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -146,11 +151,6 @@ export const GallerySection = () => {
             </button>
           ))}
         </div>
-
-        {/* Note about images */}
-        <p className="text-center text-sm text-muted-foreground mt-8 italic">
-          * Portfolio images can be customized with your actual event photography
-        </p>
       </div>
 
       {/* Lightbox Dialog */}
@@ -165,13 +165,13 @@ export const GallerySection = () => {
           
           {selectedImageData && (
             <div className="relative">
-              {/* Image placeholder */}
-              <div className={`aspect-video rounded-t-lg ${selectedImageData.placeholder}`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 border-2 border-primary/30 rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-primary/50 rounded-full" />
-                  </div>
-                </div>
+              {/* Image */}
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                <img 
+                  src={selectedImageData.image} 
+                  alt={selectedImageData.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Navigation */}
