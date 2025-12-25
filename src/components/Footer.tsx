@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import evoniqueLogo from "@/assets/evonique-logo.png";
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/evoniqueevents?igsh=eDR4dm13bWE0a2Nl&utm_source=qr", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
@@ -16,7 +16,7 @@ const policyLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="py-12 bg-maroon-deep border-t border-primary/10">
+    <footer className="py-12 bg-gradient-to-b from-card to-background border-t border-primary/20">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center gap-8">
           {/* Logo & Tagline */}

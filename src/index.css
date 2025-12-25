@@ -6,103 +6,110 @@
 
 @layer base {
   :root {
-    /* Rich Traditional Indian Wedding Theme */
-    --background: 345 40% 8%;
-    --foreground: 40 30% 92%;
+    /* Vibrant Pastel Indian Wedding Theme */
+    --background: 280 30% 98%;
+    --foreground: 280 40% 15%;
 
-    --card: 345 35% 12%;
-    --card-foreground: 40 30% 92%;
+    --card: 300 25% 97%;
+    --card-foreground: 280 40% 15%;
 
-    --popover: 345 35% 12%;
-    --popover-foreground: 40 30% 92%;
+    --popover: 300 25% 97%;
+    --popover-foreground: 280 40% 15%;
 
-    --primary: 40 70% 50%;
-    --primary-foreground: 345 40% 8%;
+    --primary: 330 75% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 345 30% 18%;
-    --secondary-foreground: 40 30% 92%;
+    --secondary: 175 55% 75%;
+    --secondary-foreground: 280 40% 15%;
 
-    --muted: 345 25% 15%;
-    --muted-foreground: 40 20% 70%;
+    --muted: 280 20% 92%;
+    --muted-foreground: 280 20% 45%;
 
-    --accent: 320 45% 25%;
-    --accent-foreground: 40 30% 92%;
+    --accent: 45 85% 70%;
+    --accent-foreground: 280 40% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 30% 25%;
-    --input: 345 25% 20%;
-    --ring: 40 70% 50%;
+    --border: 280 20% 85%;
+    --input: 280 15% 90%;
+    --ring: 330 75% 60%;
 
     --radius: 0.5rem;
 
-    /* Custom Evonique colors */
-    --maroon: 345 60% 20%;
-    --maroon-deep: 345 70% 12%;
-    --gold: 40 70% 50%;
-    --gold-light: 40 60% 65%;
-    --gold-glow: 40 80% 55%;
-    --cream: 40 30% 92%;
-    --cream-muted: 40 20% 80%;
-    --purple-deep: 280 45% 15%;
+    /* Custom Evonique Pastel colors */
+    --coral: 10 80% 70%;
+    --coral-deep: 10 70% 60%;
+    --lavender: 280 50% 75%;
+    --lavender-deep: 280 45% 65%;
+    --mint: 160 45% 75%;
+    --mint-deep: 160 50% 60%;
+    --peach: 25 80% 80%;
+    --peach-deep: 25 70% 70%;
+    --gold: 45 85% 60%;
+    --gold-light: 45 80% 75%;
+    --gold-glow: 45 90% 65%;
+    --cream: 40 40% 96%;
+    --cream-muted: 40 25% 90%;
+    --purple-soft: 280 40% 80%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(345 70% 6%) 0%, hsl(345 40% 10%) 50%, hsl(280 35% 12%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(40 70% 50%) 0%, hsl(40 80% 60%) 50%, hsl(40 70% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(345 35% 14%) 0%, hsl(345 40% 10%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(280 35% 96%) 0%, hsl(330 40% 95%) 50%, hsl(45 50% 95%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(330 75% 60%) 0%, hsl(45 85% 65%) 50%, hsl(175 55% 70%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(300 30% 97%) 0%, hsl(280 25% 95%) 100%);
 
     /* Shadows */
-    --shadow-gold: 0 0 30px hsl(40 70% 50% / 0.2);
-    --shadow-elegant: 0 20px 50px hsl(345 70% 5% / 0.5);
+    --shadow-gold: 0 0 30px hsl(330 75% 60% / 0.2);
+    --shadow-elegant: 0 20px 50px hsl(280 30% 50% / 0.1);
 
-    --sidebar-background: 345 40% 8%;
-    --sidebar-foreground: 40 30% 92%;
-    --sidebar-primary: 40 70% 50%;
-    --sidebar-primary-foreground: 345 40% 8%;
-    --sidebar-accent: 345 30% 18%;
-    --sidebar-accent-foreground: 40 30% 92%;
-    --sidebar-border: 40 30% 25%;
-    --sidebar-ring: 40 70% 50%;
+    --sidebar-background: 280 30% 98%;
+    --sidebar-foreground: 280 40% 15%;
+    --sidebar-primary: 330 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 175 55% 75%;
+    --sidebar-accent-foreground: 280 40% 15%;
+    --sidebar-border: 280 20% 85%;
+    --sidebar-ring: 330 75% 60%;
   }
 
   .dark {
-    --background: 345 40% 8%;
-    --foreground: 40 30% 92%;
+    /* Vibrant Pastel Dark Mode */
+    --background: 280 25% 12%;
+    --foreground: 40 40% 96%;
 
-    --card: 345 35% 12%;
-    --card-foreground: 40 30% 92%;
+    --card: 280 20% 16%;
+    --card-foreground: 40 40% 96%;
 
-    --popover: 345 35% 12%;
-    --popover-foreground: 40 30% 92%;
+    --popover: 280 20% 16%;
+    --popover-foreground: 40 40% 96%;
 
-    --primary: 40 70% 50%;
-    --primary-foreground: 345 40% 8%;
+    --primary: 330 75% 65%;
+    --primary-foreground: 280 25% 12%;
 
-    --secondary: 345 30% 18%;
-    --secondary-foreground: 40 30% 92%;
+    --secondary: 175 50% 45%;
+    --secondary-foreground: 40 40% 96%;
 
-    --muted: 345 25% 15%;
-    --muted-foreground: 40 20% 70%;
+    --muted: 280 20% 22%;
+    --muted-foreground: 40 25% 70%;
 
-    --accent: 320 45% 25%;
-    --accent-foreground: 40 30% 92%;
+    --accent: 45 80% 60%;
+    --accent-foreground: 280 25% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 30% 25%;
-    --input: 345 25% 20%;
-    --ring: 40 70% 50%;
+    --border: 280 20% 30%;
+    --input: 280 20% 25%;
+    --ring: 330 75% 65%;
 
-    --sidebar-background: 345 40% 8%;
-    --sidebar-foreground: 40 30% 92%;
-    --sidebar-primary: 40 70% 50%;
-    --sidebar-primary-foreground: 345 40% 8%;
-    --sidebar-accent: 345 30% 18%;
-    --sidebar-accent-foreground: 40 30% 92%;
-    --sidebar-border: 40 30% 25%;
-    --sidebar-ring: 40 70% 50%;
+    --sidebar-background: 280 25% 12%;
+    --sidebar-foreground: 40 40% 96%;
+    --sidebar-primary: 330 75% 65%;
+    --sidebar-primary-foreground: 280 25% 12%;
+    --sidebar-accent: 175 50% 45%;
+    --sidebar-accent-foreground: 40 40% 96%;
+    --sidebar-border: 280 20% 30%;
+    --sidebar-ring: 330 75% 65%;
   }
 }
 
@@ -122,42 +129,50 @@
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(40 70% 50%) 0%, hsl(40 80% 65%) 50%, hsl(40 70% 50%) 100%);
+    background: linear-gradient(135deg, hsl(330 75% 60%) 0%, hsl(45 85% 65%) 50%, hsl(175 55% 70%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(180deg, hsl(345 70% 6%) 0%, hsl(345 40% 10%) 50%, hsl(280 35% 12%) 100%);
+    background: linear-gradient(180deg, hsl(280 35% 96%) 0%, hsl(330 40% 95%) 50%, hsl(45 50% 95%) 100%);
   }
 
   .bg-gradient-card {
-    background: linear-gradient(180deg, hsl(345 35% 14%) 0%, hsl(345 40% 10%) 100%);
+    background: linear-gradient(180deg, hsl(300 30% 97%) 0%, hsl(280 25% 95%) 100%);
   }
 
   .border-gold {
-    border-color: hsl(40 70% 50%);
+    border-color: hsl(330 75% 60%);
   }
 
   .glow-gold {
-    box-shadow: 0 0 30px hsl(40 70% 50% / 0.3);
+    box-shadow: 0 0 30px hsl(330 75% 60% / 0.3);
   }
 
   .text-gold {
-    color: hsl(40 70% 50%);
+    color: hsl(330 75% 60%);
   }
 
   .text-cream {
-    color: hsl(40 30% 92%);
+    color: hsl(40 40% 96%);
   }
 
-  .bg-maroon {
-    background-color: hsl(345 60% 20%);
+  .bg-pastel-coral {
+    background-color: hsl(10 80% 70%);
   }
 
-  .bg-maroon-deep {
-    background-color: hsl(345 70% 12%);
+  .bg-pastel-lavender {
+    background-color: hsl(280 50% 75%);
+  }
+
+  .bg-pastel-mint {
+    background-color: hsl(160 45% 75%);
+  }
+
+  .bg-pastel-peach {
+    background-color: hsl(25 80% 80%);
   }
 }
 
@@ -172,19 +187,19 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(345 40% 8%);
+  background: hsl(280 30% 95%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(40 70% 50% / 0.3);
+  background: hsl(330 75% 60% / 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(40 70% 50% / 0.5);
+  background: hsl(330 75% 60% / 0.5);
 }
 
 /* Decorative patterns */
 .pattern-mandala {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a96e' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30zM0 30c0 16.569 13.431 30 30 30V0C13.431 0 0 13.431 0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e87da0' fill-opacity='0.08'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30zM0 30c0 16.569 13.431 30 30 30V0C13.431 0 0 13.431 0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
