@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { WhyEvoniqueSection } from "@/components/WhyEvoniqueSection";
@@ -9,22 +10,28 @@ import { GallerySection } from "@/components/GallerySection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import { IntroAnimation } from "@/components/IntroAnimation";
 
 const Index = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
-      <HeroSection />
-      <WhyEvoniqueSection />
-      <AboutSection />
-      <ServicesSection />
-      <ExperienceSection />
-      <IndianWeddingsSection />
-      <GallerySection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      {showIntro && <IntroAnimation onComplete={() => setShowIntro(false)} />}
+      <main className={`min-h-screen bg-background ${showIntro ? 'overflow-hidden' : ''}`}>
+        <Navigation />
+        <HeroSection />
+        <WhyEvoniqueSection />
+        <AboutSection />
+        <ServicesSection />
+        <ExperienceSection />
+        <IndianWeddingsSection />
+        <GallerySection />
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   );
 };
 

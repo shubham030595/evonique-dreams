@@ -47,6 +47,7 @@ export const ContactSection = () => {
     try {
       const validatedData = contactSchema.parse(formData);
 
+      // Save to Supabase
       const { error } = await supabase.from("inquiries").insert([{
         name: validatedData.name,
         email: validatedData.email,
@@ -57,6 +58,28 @@ export const ContactSection = () => {
       }]);
 
       if (error) throw error;
+
+      // Submit to Google Sheets via Apps Script Web App
+      // To set this up: Create a Google Apps Script with a doPost function
+      // and deploy it as a web app. Replace the URL below with your deployed URL.
+      const GOOGLE_SHEETS_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+      
+      if (GOOGLE_SHEETS_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+        await fetch(GOOGLE_SHEETS_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: validatedData.name,
+            email: validatedData.email,
+            phone: validatedData.phone || "",
+            event_type: validatedData.event_type,
+            preferred_date: validatedData.preferred_date || "",
+            message: validatedData.message || "",
+            timestamp: new Date().toISOString(),
+          }),
+        });
+      }
 
       toast({
         title: "Inquiry Submitted",
